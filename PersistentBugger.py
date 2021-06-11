@@ -10,3 +10,22 @@
 
 #  persistence(4) # returns 0, because 4 is already a one-digit number
 
+def persistence(n):
+    counter = 0
+    number = str(n)
+    holder = list(number)
+    while len(number) > 1:
+        num = 1
+        for x in holder:
+            num *= int(x)
+
+        number = str(num)
+        holder = list(number)
+        counter += 1
+        
+    return counter
+
+
+print(persistence(39))
+
+#working 
