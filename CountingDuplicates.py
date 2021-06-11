@@ -10,3 +10,12 @@
 # "aA11" -> 2 # 'a' and '1'
 # "ABBA" -> 2 # 'A' and 'B' each occur twice
 
+def duplicate_count(text):
+    theText = text.lower()
+    theList = []
+    for x in theText: 
+        if x not in theList and theText.count(x) > 1:
+            theList.append(x)
+    return len(theList)
+
+#works
