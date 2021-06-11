@@ -40,3 +40,5 @@ def likes(names):
    
 
 print(likes(['Max', 'John', 'Mark']))    
+
+#testing .* commits
