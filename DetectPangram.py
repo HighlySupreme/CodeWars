@@ -5,8 +5,12 @@
 # pangram = "The quick, brown fox jumps over the lazy dog!"
 # test.assert_equals(is_pangram(pangram), True)
 
-
 import string
 
 def is_pangram(s):
-    return False
+
+    for x in string.ascii_lowercase:
+        if x not in s:
+            return False
+
+    return True
