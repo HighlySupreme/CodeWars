@@ -10,7 +10,7 @@ import string
 def is_pangram(s):
 
     for x in string.ascii_lowercase:
-        if x not in s:
+        if x not in s.lower():
             return False
 
     return True
