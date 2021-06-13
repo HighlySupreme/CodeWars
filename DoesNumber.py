@@ -18,4 +18,10 @@
 # test.assert_equals(narcissistic(4887), False, '4887 is not narcissistic')
 
 def narcissistic( value ):
-    # Code away
+    multiplyer = len(str(value))
+    sum = 0
+    for x in str(value):
+        sum += int(x) ** multiplyer
+    if sum == value: 
+        return True
+    return False
