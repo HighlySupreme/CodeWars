@@ -8,4 +8,11 @@
 # test.assert_equals(pig_it('This is my string'),'hisTay siay ymay tringsay')
 
 def pig_it(text):
-    #your code here
+    theWords = text.split()
+    for index, x in enumerate(theWords):
+        theWords[index] = x[1:] + x[:1] + "ay"
+
+    return " ".join(theWords)
+
+
+
