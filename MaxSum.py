@@ -13,3 +13,18 @@
 # test.assert_equals(max_sequence([-2, 1, -3, 4, -1, 2, 1, -5, 4]), 6)
 
 def max_sequence(arr):
+    
+    sum = 0
+    if all(x < 0 for x in arr): 
+        return 0
+
+    for index, x in enumerate(arr):
+        temp = x
+        for y in arr[index+1:]:
+            temp += y
+            if temp > sum:
+                sum = temp
+
+    return sum        
+            
+print(max_sequence([-2, -1, -3, 4, -1, 2, 1, -5, 4]))  
