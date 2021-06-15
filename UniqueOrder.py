@@ -10,4 +10,14 @@
 # test.assert_equals(unique_in_order('AAAABBBCCDAABBB'), ['A','B','C','D','A','B'])
 
 def unique_in_order(iterable):
-    pass
+    newList = []
+    if len(iterable) < 1: 
+        return []
+    newList.append(iterable[0])
+    for x in iterable[1:]:
+        if newList[-1] != x:
+            newList.append(x)
+
+    return newList
+
+
