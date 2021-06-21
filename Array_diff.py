@@ -23,3 +23,10 @@
 #         test.assert_equals(array_diff([1,2,3], [1, 2]), [3], "a was [1,2,3], b was [1, 2], expected [3]")
 
 
+def array_diff(a, b):
+    newList = []
+    for x in a:
+        if x not in b:
+            newList.append(x)
+
+    return newList
